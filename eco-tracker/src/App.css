@@ -1,0 +1,108 @@
+/* Define theme variables */
+:root {
+  --background-light: url('https://img.freepik.com/free-photo/still-life-sustainable-lifestyle-elements-composition_23-2148997060.jpg') no-repeat center center fixed;
+  --background-dark: #2c3e50; /* Dark background for dark mode */
+  --primary-color-light: #333;
+  --primary-color-dark: #ecf0f1;
+  --accent-light: #28a745;
+  --accent-dark: #1abc9c;
+  --button-light: #dc3545;
+  --button-dark: #e74c3c;
+}
+
+/* Global styles for light and dark themes */
+body {
+  font-family: Arial, sans-serif;
+  background: var(--background-light);
+  background-size: cover; /* Make sure the background covers the entire viewport */
+  background-attachment: fixed; /* Ensure the background image stays fixed while scrolling */
+  background-position: center center; /* Ensure the background is centered */
+  color: var(--primary-color-light);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background: var(--background-dark);
+  color: var(--primary-color-dark);
+}
+
+/* Container styles */
+.app-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+.app-container.dark-mode {
+  background-color: #34495e; /* Dark container background */
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  background-color: var(--button-light);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-dark);
+}
+
+/* Additional styles for action list and impact summary */
+.action-list, .impact-summary {
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f0f8f5;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.action-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #e0f2e9;
+}
+
+.clear-button {
+  padding: 10px 20px;
+  background-color: var(--button-light);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  background-color: var(--button-dark);
+}
+
+/* Add these styles to your App.css or ThemeToggle.css */
+
+.toggle-button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--primary-color-light);
+}
+
+.toggle-button:hover {
+  background-color: lightgreen;
+  color: green;
+}
+
